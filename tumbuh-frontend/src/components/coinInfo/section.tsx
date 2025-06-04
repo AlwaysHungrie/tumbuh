@@ -7,7 +7,7 @@ export default function Section({
 }) {
   return (
     <div
-      className={`flex flex-col gap-2 flex-1 p-2
+      className={`flex flex-col gap-2 flex-1 p-2 relative
         bg-gradient-to-r from-white/30 to-transparent`}
     >
       <h2 className="font-bold text-sm">{title}</h2>

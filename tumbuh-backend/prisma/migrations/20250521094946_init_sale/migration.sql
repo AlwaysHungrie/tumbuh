@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Sale" ADD COLUMN     "nonce" TEXT NOT NULL DEFAULT '000000';
