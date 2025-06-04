@@ -1528,7 +1528,7 @@ export namespace Prisma {
    */
   interface TumbuhMetadataFieldRefs {
     readonly id: FieldRef<"TumbuhMetadata", 'String'>
-    readonly currentPrice: FieldRef<"TumbuhMetadata", 'Int'>
+    readonly currentPrice: FieldRef<"TumbuhMetadata", 'Float'>
     readonly isAcceptingWater: FieldRef<"TumbuhMetadata", 'Boolean'>
     readonly createdAt: FieldRef<"TumbuhMetadata", 'DateTime'>
     readonly updatedAt: FieldRef<"TumbuhMetadata", 'DateTime'>
@@ -1959,16 +1959,16 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Int'
+   * Reference to a field of type 'Float'
    */
-  export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
+  export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
     
 
 
   /**
-   * Reference to a field of type 'Int[]'
+   * Reference to a field of type 'Float[]'
    */
-  export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
+  export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
     
 
 
@@ -1994,16 +1994,16 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Float'
+   * Reference to a field of type 'Int'
    */
-  export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
+  export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
     
 
 
   /**
-   * Reference to a field of type 'Float[]'
+   * Reference to a field of type 'Int[]'
    */
-  export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
+  export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
     
   /**
    * Deep Input Types
@@ -2015,7 +2015,7 @@ export namespace Prisma {
     OR?: TumbuhMetadataWhereInput[]
     NOT?: TumbuhMetadataWhereInput | TumbuhMetadataWhereInput[]
     id?: StringFilter<"TumbuhMetadata"> | string
-    currentPrice?: IntFilter<"TumbuhMetadata"> | number
+    currentPrice?: FloatFilter<"TumbuhMetadata"> | number
     isAcceptingWater?: BoolFilter<"TumbuhMetadata"> | boolean
     createdAt?: DateTimeFilter<"TumbuhMetadata"> | Date | string
     updatedAt?: DateTimeFilter<"TumbuhMetadata"> | Date | string
@@ -2034,7 +2034,7 @@ export namespace Prisma {
     AND?: TumbuhMetadataWhereInput | TumbuhMetadataWhereInput[]
     OR?: TumbuhMetadataWhereInput[]
     NOT?: TumbuhMetadataWhereInput | TumbuhMetadataWhereInput[]
-    currentPrice?: IntFilter<"TumbuhMetadata"> | number
+    currentPrice?: FloatFilter<"TumbuhMetadata"> | number
     isAcceptingWater?: BoolFilter<"TumbuhMetadata"> | boolean
     createdAt?: DateTimeFilter<"TumbuhMetadata"> | Date | string
     updatedAt?: DateTimeFilter<"TumbuhMetadata"> | Date | string
@@ -2058,7 +2058,7 @@ export namespace Prisma {
     OR?: TumbuhMetadataScalarWhereWithAggregatesInput[]
     NOT?: TumbuhMetadataScalarWhereWithAggregatesInput | TumbuhMetadataScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"TumbuhMetadata"> | string
-    currentPrice?: IntWithAggregatesFilter<"TumbuhMetadata"> | number
+    currentPrice?: FloatWithAggregatesFilter<"TumbuhMetadata"> | number
     isAcceptingWater?: BoolWithAggregatesFilter<"TumbuhMetadata"> | boolean
     createdAt?: DateTimeWithAggregatesFilter<"TumbuhMetadata"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"TumbuhMetadata"> | Date | string
@@ -2082,7 +2082,7 @@ export namespace Prisma {
 
   export type TumbuhMetadataUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    currentPrice?: IntFieldUpdateOperationsInput | number
+    currentPrice?: FloatFieldUpdateOperationsInput | number
     isAcceptingWater?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -2090,7 +2090,7 @@ export namespace Prisma {
 
   export type TumbuhMetadataUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    currentPrice?: IntFieldUpdateOperationsInput | number
+    currentPrice?: FloatFieldUpdateOperationsInput | number
     isAcceptingWater?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -2106,7 +2106,7 @@ export namespace Prisma {
 
   export type TumbuhMetadataUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
-    currentPrice?: IntFieldUpdateOperationsInput | number
+    currentPrice?: FloatFieldUpdateOperationsInput | number
     isAcceptingWater?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -2114,7 +2114,7 @@ export namespace Prisma {
 
   export type TumbuhMetadataUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
-    currentPrice?: IntFieldUpdateOperationsInput | number
+    currentPrice?: FloatFieldUpdateOperationsInput | number
     isAcceptingWater?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -2135,15 +2135,15 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type IntFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[] | ListIntFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntFilter<$PrismaModel> | number
+  export type FloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
   export type BoolFilter<$PrismaModel = never> = {
@@ -2212,20 +2212,20 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type IntWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[] | ListIntFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
+  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
     _count?: NestedIntFilter<$PrismaModel>
     _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedIntFilter<$PrismaModel>
-    _min?: NestedIntFilter<$PrismaModel>
-    _max?: NestedIntFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
   }
 
   export type BoolWithAggregatesFilter<$PrismaModel = never> = {
@@ -2254,7 +2254,7 @@ export namespace Prisma {
     set?: string
   }
 
-  export type IntFieldUpdateOperationsInput = {
+  export type FloatFieldUpdateOperationsInput = {
     set?: number
     increment?: number
     decrement?: number
@@ -2284,15 +2284,15 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type NestedIntFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel>
-    in?: number[] | ListIntFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntFilter<$PrismaModel> | number
+  export type NestedFloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
   }
 
   export type NestedBoolFilter<$PrismaModel = never> = {
@@ -2328,7 +2328,7 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
+  export type NestedIntFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel>
     in?: number[] | ListIntFieldRefInput<$PrismaModel>
     notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
@@ -2336,15 +2336,10 @@ export namespace Prisma {
     lte?: number | IntFieldRefInput<$PrismaModel>
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
-    _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedIntFilter<$PrismaModel>
-    _min?: NestedIntFilter<$PrismaModel>
-    _max?: NestedIntFilter<$PrismaModel>
+    not?: NestedIntFilter<$PrismaModel> | number
   }
 
-  export type NestedFloatFilter<$PrismaModel = never> = {
+  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | FloatFieldRefInput<$PrismaModel>
     in?: number[] | ListFloatFieldRefInput<$PrismaModel>
     notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
@@ -2352,7 +2347,12 @@ export namespace Prisma {
     lte?: number | FloatFieldRefInput<$PrismaModel>
     gt?: number | FloatFieldRefInput<$PrismaModel>
     gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatFilter<$PrismaModel> | number
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
   }
 
   export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {

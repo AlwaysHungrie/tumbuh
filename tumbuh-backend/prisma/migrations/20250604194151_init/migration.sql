@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "TumbuhMetadata" ALTER COLUMN "currentPrice" SET DEFAULT 0,
+ALTER COLUMN "currentPrice" SET DATA TYPE DOUBLE PRECISION;
